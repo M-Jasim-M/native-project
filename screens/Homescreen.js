@@ -194,6 +194,7 @@ import { TextInput, StyleSheet, Text,Image, View, TouchableOpacity, ScrollView }
 import React, { useState, useRef } from 'react'; // Import useRef hook
 import { useSelector, useDispatch } from 'react-redux'; // Importing hooks
 import { toggleTheme } from '../action/ExampleActions'; // Importing the toggleTheme action
+import LoginScreen from './Login';
 
 const HomeScreen = () => {
   const isDarkMode = useSelector(state => state.theme.isDarkMode); // Accessing isDarkMode state from theme reducer
@@ -275,13 +276,14 @@ const HomeScreen = () => {
   return (
     <View style={[styles.container, { flex: 1, justifyContent: 'center', alignItems: 'center'}]}>
       {/* <ScrollView> */}
-       <Image source={image} style={{width:'50%', height:'20%'}} />
+      {/* <LoginScreen/> */}
+       {/* <Image source={image} style={{width:'50%', height:'20%'}} /> */}
       <Text style={[styles.text, { padding: 10 }]}>Open up App.js to start working on your hehehehe app!</Text>
       <Text style={[styles.text, { width: '90%' }]}>This is new text {'\n'} {inputValue || 'Start typing here...'}</Text>
       <Text style={[styles.text, { width: '90%' }]}>Typing: {typingIndicator}</Text>
       <StatusBar style="auto" />
       <TouchableOpacity onPress={onPress2} style={[styles.button, { padding: 15, borderRadius: 5, marginTop: 20 }]}>
-        <Text style={{ color: 'white', fontSize: 18, fontWeight: 'bold' }}>Click me</Text>
+        <Text style={{ color: 'white', fontSize: 18, fontWeight: 'bold' }}>Check speed</Text>
       </TouchableOpacity>
       <TextInput
         value={inputValue} // Set the value to the state value
